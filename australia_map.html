@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cbffbd9ec6a1ff588315c14c0a3437fa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_cbffbd9ec6a1ff588315c14c0a3437fa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cbffbd9ec6a1ff588315c14c0a3437fa = L.map(
+                "map_cbffbd9ec6a1ff588315c14c0a3437fa",
+                {
+                    center: [-25.0, 135.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_097cd5c275d25ec0efeb01afeeeaf110 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var marker_c098157a791cba1e758cd219f190bc69 = L.marker(
+                [-34.9285, 138.6007],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_d3ba867418a4c566ac8742b959141f65 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c098157a791cba1e758cd219f190bc69.setIcon(icon_d3ba867418a4c566ac8742b959141f65);
+        
+    
+        var popup_2682fda537e7e8cecd652696f119286a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71ca2e05d9a9deb0ba478358a7d9653b = $(`<div id="html_71ca2e05d9a9deb0ba478358a7d9653b" style="width: 100.0%; height: 100.0%;">Ubicación: Adelaide&lt;br&gt;Latitud: -34.9285&lt;br&gt;Longitud: 138.6007&lt;br&gt;Promedio de Lluvia: 1.57 mm</div>`)[0];
+                popup_2682fda537e7e8cecd652696f119286a.setContent(html_71ca2e05d9a9deb0ba478358a7d9653b);
+            
+        
+
+        marker_c098157a791cba1e758cd219f190bc69.bindPopup(popup_2682fda537e7e8cecd652696f119286a)
+        ;
+
+        
+    
+    
+            var marker_68bfb361c70bd9d8f770f02bc68e85a6 = L.marker(
+                [-35.0031, 117.8657],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_5e4a246e17f68b1db080f7d528ce604e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_68bfb361c70bd9d8f770f02bc68e85a6.setIcon(icon_5e4a246e17f68b1db080f7d528ce604e);
+        
+    
+        var popup_3aea571469fa1af61d4c2f098e7e2f1f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_719a4725fcf1fe0a9d4ca833e87f16bb = $(`<div id="html_719a4725fcf1fe0a9d4ca833e87f16bb" style="width: 100.0%; height: 100.0%;">Ubicación: Albany&lt;br&gt;Latitud: -35.0031&lt;br&gt;Longitud: 117.8657&lt;br&gt;Promedio de Lluvia: 2.26 mm</div>`)[0];
+                popup_3aea571469fa1af61d4c2f098e7e2f1f.setContent(html_719a4725fcf1fe0a9d4ca833e87f16bb);
+            
+        
+
+        marker_68bfb361c70bd9d8f770f02bc68e85a6.bindPopup(popup_3aea571469fa1af61d4c2f098e7e2f1f)
+        ;
+
+        
+    
+    
+            var marker_b359ea6eb23bfb851b457345fe210e5a = L.marker(
+                [-36.0737, 146.9135],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_ac00cd5f6b29f40f0860d31cddb169ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b359ea6eb23bfb851b457345fe210e5a.setIcon(icon_ac00cd5f6b29f40f0860d31cddb169ae);
+        
+    
+        var popup_c4f670ab7150a68246ba1d3eb7aef999 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f40e23c20e32a2b6cf42cf9d9190a30 = $(`<div id="html_0f40e23c20e32a2b6cf42cf9d9190a30" style="width: 100.0%; height: 100.0%;">Ubicación: Albury&lt;br&gt;Latitud: -36.0737&lt;br&gt;Longitud: 146.9135&lt;br&gt;Promedio de Lluvia: 1.91 mm</div>`)[0];
+                popup_c4f670ab7150a68246ba1d3eb7aef999.setContent(html_0f40e23c20e32a2b6cf42cf9d9190a30);
+            
+        
+
+        marker_b359ea6eb23bfb851b457345fe210e5a.bindPopup(popup_c4f670ab7150a68246ba1d3eb7aef999)
+        ;
+
+        
+    
+    
+            var marker_c8650552d0ceb8b3b0d85d41982ef3de = L.marker(
+                [-23.698, 133.8807],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_1d8224628b55059f9e18d0c313cdd079 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c8650552d0ceb8b3b0d85d41982ef3de.setIcon(icon_1d8224628b55059f9e18d0c313cdd079);
+        
+    
+        var popup_0f25f036c255aba8e282f27e9c63266e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b987a4a47734ca33a2c9976b9b52e61b = $(`<div id="html_b987a4a47734ca33a2c9976b9b52e61b" style="width: 100.0%; height: 100.0%;">Ubicación: AliceSprings&lt;br&gt;Latitud: -23.698&lt;br&gt;Longitud: 133.8807&lt;br&gt;Promedio de Lluvia: 0.88 mm</div>`)[0];
+                popup_0f25f036c255aba8e282f27e9c63266e.setContent(html_b987a4a47734ca33a2c9976b9b52e61b);
+            
+        
+
+        marker_c8650552d0ceb8b3b0d85d41982ef3de.bindPopup(popup_0f25f036c255aba8e282f27e9c63266e)
+        ;
+
+        
+    
+    
+            var marker_cff0b981f9d76bcfc6f61c661459dd4d = L.marker(
+                [-33.8813, 150.74],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_6a67c6f6929ec557e70a204b9a0f69cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cff0b981f9d76bcfc6f61c661459dd4d.setIcon(icon_6a67c6f6929ec557e70a204b9a0f69cc);
+        
+    
+        var popup_c61689800a54de5b9f2b64f42a5381b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c79504e05675422d32539dd2fd311dab = $(`<div id="html_c79504e05675422d32539dd2fd311dab" style="width: 100.0%; height: 100.0%;">Ubicación: BadgerysCreek&lt;br&gt;Latitud: -33.8813&lt;br&gt;Longitud: 150.74&lt;br&gt;Promedio de Lluvia: 2.19 mm</div>`)[0];
+                popup_c61689800a54de5b9f2b64f42a5381b6.setContent(html_c79504e05675422d32539dd2fd311dab);
+            
+        
+
+        marker_cff0b981f9d76bcfc6f61c661459dd4d.bindPopup(popup_c61689800a54de5b9f2b64f42a5381b6)
+        ;
+
+        
+    
+    
+            var marker_eef67483ad07e53bbb12aa0351ccbf71 = L.marker(
+                [-37.5622, 143.8503],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_3625b37badade979206120a29944984b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_eef67483ad07e53bbb12aa0351ccbf71.setIcon(icon_3625b37badade979206120a29944984b);
+        
+    
+        var popup_58de030eb31838d4aabf866d25ac5e72 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59f3e3553fa9a30b63524d1d0ea10479 = $(`<div id="html_59f3e3553fa9a30b63524d1d0ea10479" style="width: 100.0%; height: 100.0%;">Ubicación: Ballarat&lt;br&gt;Latitud: -37.5622&lt;br&gt;Longitud: 143.8503&lt;br&gt;Promedio de Lluvia: 1.74 mm</div>`)[0];
+                popup_58de030eb31838d4aabf866d25ac5e72.setContent(html_59f3e3553fa9a30b63524d1d0ea10479);
+            
+        
+
+        marker_eef67483ad07e53bbb12aa0351ccbf71.bindPopup(popup_58de030eb31838d4aabf866d25ac5e72)
+        ;
+
+        
+    
+    
+            var marker_b756e8a27a8e315303e0b64a3a3eeb14 = L.marker(
+                [-36.757, 144.2794],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_5362ab6b34b45961da1004059740f4a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b756e8a27a8e315303e0b64a3a3eeb14.setIcon(icon_5362ab6b34b45961da1004059740f4a2);
+        
+    
+        var popup_61b32fcf186a92ad77695dc1569fc7d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1258c6aac951727a9f0202f1a7ec83f8 = $(`<div id="html_1258c6aac951727a9f0202f1a7ec83f8" style="width: 100.0%; height: 100.0%;">Ubicación: Bendigo&lt;br&gt;Latitud: -36.757&lt;br&gt;Longitud: 144.2794&lt;br&gt;Promedio de Lluvia: 1.62 mm</div>`)[0];
+                popup_61b32fcf186a92ad77695dc1569fc7d1.setContent(html_1258c6aac951727a9f0202f1a7ec83f8);
+            
+        
+
+        marker_b756e8a27a8e315303e0b64a3a3eeb14.bindPopup(popup_61b32fcf186a92ad77695dc1569fc7d1)
+        ;
+
+        
+    
+    
+            var marker_2224727869179e208fc93f26fd2f5933 = L.marker(
+                [-27.4698, 153.0251],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_4658acf95069657c1696ea2e6525ef89 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2224727869179e208fc93f26fd2f5933.setIcon(icon_4658acf95069657c1696ea2e6525ef89);
+        
+    
+        var popup_2ac0e804ce644359523ca77063b4b1c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c206d8e0bcb767de18ff4d927dbbf6d = $(`<div id="html_8c206d8e0bcb767de18ff4d927dbbf6d" style="width: 100.0%; height: 100.0%;">Ubicación: Brisbane&lt;br&gt;Latitud: -27.4698&lt;br&gt;Longitud: 153.0251&lt;br&gt;Promedio de Lluvia: 3.15 mm</div>`)[0];
+                popup_2ac0e804ce644359523ca77063b4b1c5.setContent(html_8c206d8e0bcb767de18ff4d927dbbf6d);
+            
+        
+
+        marker_2224727869179e208fc93f26fd2f5933.bindPopup(popup_2ac0e804ce644359523ca77063b4b1c5)
+        ;
+
+        
+    
+    
+            var marker_dc71949fc4c613f972a442758bcb09dc = L.marker(
+                [-16.9186, 145.7781],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_6637051234d64f1df3e0a81b8c735efd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_dc71949fc4c613f972a442758bcb09dc.setIcon(icon_6637051234d64f1df3e0a81b8c735efd);
+        
+    
+        var popup_7cefd6fb77d58a4fc5c3e95842557819 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32f707fe1c756bb6ef2a0eecf0d52e0d = $(`<div id="html_32f707fe1c756bb6ef2a0eecf0d52e0d" style="width: 100.0%; height: 100.0%;">Ubicación: Cairns&lt;br&gt;Latitud: -16.9186&lt;br&gt;Longitud: 145.7781&lt;br&gt;Promedio de Lluvia: 5.74 mm</div>`)[0];
+                popup_7cefd6fb77d58a4fc5c3e95842557819.setContent(html_32f707fe1c756bb6ef2a0eecf0d52e0d);
+            
+        
+
+        marker_dc71949fc4c613f972a442758bcb09dc.bindPopup(popup_7cefd6fb77d58a4fc5c3e95842557819)
+        ;
+
+        
+    
+    
+            var marker_085ccbc7a1aed3fc5a79cabbba407fae = L.marker(
+                [-35.2809, 149.13],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_b085bcaa97811115dba6d21072246b2a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_085ccbc7a1aed3fc5a79cabbba407fae.setIcon(icon_b085bcaa97811115dba6d21072246b2a);
+        
+    
+        var popup_801f65fe17d479ec0792106b18a1df7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e850bf5627a784ecb0f757bf532deb7c = $(`<div id="html_e850bf5627a784ecb0f757bf532deb7c" style="width: 100.0%; height: 100.0%;">Ubicación: Canberra&lt;br&gt;Latitud: -35.2809&lt;br&gt;Longitud: 149.13&lt;br&gt;Promedio de Lluvia: 1.74 mm</div>`)[0];
+                popup_801f65fe17d479ec0792106b18a1df7a.setContent(html_e850bf5627a784ecb0f757bf532deb7c);
+            
+        
+
+        marker_085ccbc7a1aed3fc5a79cabbba407fae.bindPopup(popup_801f65fe17d479ec0792106b18a1df7a)
+        ;
+
+        
+    
+    
+            var marker_802890f8bbb57070eb55e04a2081317f = L.marker(
+                [-31.4983, 145.8344],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_b127239e26d3bf3aec4143c389c2203d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_802890f8bbb57070eb55e04a2081317f.setIcon(icon_b127239e26d3bf3aec4143c389c2203d);
+        
+    
+        var popup_3b34eeb726f1d4a9f227408f1b42e4cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc4e3181665af488765b601527e9a9e2 = $(`<div id="html_bc4e3181665af488765b601527e9a9e2" style="width: 100.0%; height: 100.0%;">Ubicación: Cobar&lt;br&gt;Latitud: -31.4983&lt;br&gt;Longitud: 145.8344&lt;br&gt;Promedio de Lluvia: 1.13 mm</div>`)[0];
+                popup_3b34eeb726f1d4a9f227408f1b42e4cd.setContent(html_bc4e3181665af488765b601527e9a9e2);
+            
+        
+
+        marker_802890f8bbb57070eb55e04a2081317f.bindPopup(popup_3b34eeb726f1d4a9f227408f1b42e4cd)
+        ;
+
+        
+    
+    
+            var marker_7ac40f32422c68fededc9356dd5162a4 = L.marker(
+                [-30.2963, 153.1131],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_ee50534eb05f16856a9a20e5aa691566 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7ac40f32422c68fededc9356dd5162a4.setIcon(icon_ee50534eb05f16856a9a20e5aa691566);
+        
+    
+        var popup_da0de2952b158ec14a44be3c4c3c4326 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fcbd49244c72703a69e4a37cde23b13b = $(`<div id="html_fcbd49244c72703a69e4a37cde23b13b" style="width: 100.0%; height: 100.0%;">Ubicación: CoffsHarbour&lt;br&gt;Latitud: -30.2963&lt;br&gt;Longitud: 153.1131&lt;br&gt;Promedio de Lluvia: 5.06 mm</div>`)[0];
+                popup_da0de2952b158ec14a44be3c4c3c4326.setContent(html_fcbd49244c72703a69e4a37cde23b13b);
+            
+        
+
+        marker_7ac40f32422c68fededc9356dd5162a4.bindPopup(popup_da0de2952b158ec14a44be3c4c3c4326)
+        ;
+
+        
+    
+    
+            var marker_f7c4a472b3e04273a6ebc86fb0e0faa0 = L.marker(
+                [-37.9223, 141.276],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_2996cb27d8dd728995b484eb1b7a6927 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f7c4a472b3e04273a6ebc86fb0e0faa0.setIcon(icon_2996cb27d8dd728995b484eb1b7a6927);
+        
+    
+        var popup_49e3d80455c7b10a33ad408ce24af81f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f52cc529dd04e4bf972489f018bb6881 = $(`<div id="html_f52cc529dd04e4bf972489f018bb6881" style="width: 100.0%; height: 100.0%;">Ubicación: Dartmoor&lt;br&gt;Latitud: -37.9223&lt;br&gt;Longitud: 141.276&lt;br&gt;Promedio de Lluvia: 2.15 mm</div>`)[0];
+                popup_49e3d80455c7b10a33ad408ce24af81f.setContent(html_f52cc529dd04e4bf972489f018bb6881);
+            
+        
+
+        marker_f7c4a472b3e04273a6ebc86fb0e0faa0.bindPopup(popup_49e3d80455c7b10a33ad408ce24af81f)
+        ;
+
+        
+    
+    
+            var marker_51b1e052c4f46749fcb504536cffe6ee = L.marker(
+                [-12.4634, 130.8456],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_ce1d069f5b99288ee2d8a365c306417f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_51b1e052c4f46749fcb504536cffe6ee.setIcon(icon_ce1d069f5b99288ee2d8a365c306417f);
+        
+    
+        var popup_c17fa0be7f759139d05a3df21138de04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3df2c23dcb8009437424b12c23d9b10 = $(`<div id="html_a3df2c23dcb8009437424b12c23d9b10" style="width: 100.0%; height: 100.0%;">Ubicación: Darwin&lt;br&gt;Latitud: -12.4634&lt;br&gt;Longitud: 130.8456&lt;br&gt;Promedio de Lluvia: 5.09 mm</div>`)[0];
+                popup_c17fa0be7f759139d05a3df21138de04.setContent(html_a3df2c23dcb8009437424b12c23d9b10);
+            
+        
+
+        marker_51b1e052c4f46749fcb504536cffe6ee.bindPopup(popup_c17fa0be7f759139d05a3df21138de04)
+        ;
+
+        
+    
+    
+            var marker_59e3e495e68488469776920531cc884e = L.marker(
+                [-28.0167, 153.4],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_6f8f0bfbfb94d14642a64b1115eab6f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_59e3e495e68488469776920531cc884e.setIcon(icon_6f8f0bfbfb94d14642a64b1115eab6f6);
+        
+    
+        var popup_b1948a9177d43c17771e53b69314a6d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7230d7b3387a5ee54143c7378fcc3120 = $(`<div id="html_7230d7b3387a5ee54143c7378fcc3120" style="width: 100.0%; height: 100.0%;">Ubicación: GoldCoast&lt;br&gt;Latitud: -28.0167&lt;br&gt;Longitud: 153.4&lt;br&gt;Promedio de Lluvia: 3.77 mm</div>`)[0];
+                popup_b1948a9177d43c17771e53b69314a6d8.setContent(html_7230d7b3387a5ee54143c7378fcc3120);
+            
+        
+
+        marker_59e3e495e68488469776920531cc884e.bindPopup(popup_b1948a9177d43c17771e53b69314a6d8)
+        ;
+
+        
+    
+    
+            var marker_6f8a40ab29300218be3864a9ff478695 = L.marker(
+                [-42.8821, 147.3272],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_4165eb58234e157a7ebe6914285f5c02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6f8a40ab29300218be3864a9ff478695.setIcon(icon_4165eb58234e157a7ebe6914285f5c02);
+        
+    
+        var popup_05f93da588172608698e586c7ad7c83e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a17ca8d525d47ec186fbf98bd7a3a1c = $(`<div id="html_1a17ca8d525d47ec186fbf98bd7a3a1c" style="width: 100.0%; height: 100.0%;">Ubicación: Hobart&lt;br&gt;Latitud: -42.8821&lt;br&gt;Longitud: 147.3272&lt;br&gt;Promedio de Lluvia: 1.60 mm</div>`)[0];
+                popup_05f93da588172608698e586c7ad7c83e.setContent(html_1a17ca8d525d47ec186fbf98bd7a3a1c);
+            
+        
+
+        marker_6f8a40ab29300218be3864a9ff478695.bindPopup(popup_05f93da588172608698e586c7ad7c83e)
+        ;
+
+        
+    
+    
+            var marker_6ceb7ed1394ce40ca61059be3c9ead4d = L.marker(
+                [-14.4644, 132.263],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_d71f633c0b0763b8ac4f7635d2120439 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6ceb7ed1394ce40ca61059be3c9ead4d.setIcon(icon_d71f633c0b0763b8ac4f7635d2120439);
+        
+    
+        var popup_6ac0cf5ac412995e718268f669ed8f0a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c996cbf9c6248c77ac72ca2c4ba36ca4 = $(`<div id="html_c996cbf9c6248c77ac72ca2c4ba36ca4" style="width: 100.0%; height: 100.0%;">Ubicación: Katherine&lt;br&gt;Latitud: -14.4644&lt;br&gt;Longitud: 132.263&lt;br&gt;Promedio de Lluvia: 3.20 mm</div>`)[0];
+                popup_6ac0cf5ac412995e718268f669ed8f0a.setContent(html_c996cbf9c6248c77ac72ca2c4ba36ca4);
+            
+        
+
+        marker_6ceb7ed1394ce40ca61059be3c9ead4d.bindPopup(popup_6ac0cf5ac412995e718268f669ed8f0a)
+        ;
+
+        
+    
+    
+            var marker_0e4567dabfeb4213a813cbd77e07d5c4 = L.marker(
+                [-41.4545, 147.1317],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_f317a06e21d7787a0cebd2a1c14a5101 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0e4567dabfeb4213a813cbd77e07d5c4.setIcon(icon_f317a06e21d7787a0cebd2a1c14a5101);
+        
+    
+        var popup_5b3bb1e542f6d088d47bd8681246d0b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d03208a64d16950f2444cd2e9521cf1 = $(`<div id="html_6d03208a64d16950f2444cd2e9521cf1" style="width: 100.0%; height: 100.0%;">Ubicación: Launceston&lt;br&gt;Latitud: -41.4545&lt;br&gt;Longitud: 147.1317&lt;br&gt;Promedio de Lluvia: 2.01 mm</div>`)[0];
+                popup_5b3bb1e542f6d088d47bd8681246d0b3.setContent(html_6d03208a64d16950f2444cd2e9521cf1);
+            
+        
+
+        marker_0e4567dabfeb4213a813cbd77e07d5c4.bindPopup(popup_5b3bb1e542f6d088d47bd8681246d0b3)
+        ;
+
+        
+    
+    
+            var marker_a623f5af1cb0b2ed12b7b328b42d5b81 = L.marker(
+                [-37.8136, 144.9631],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_716c17ef9f93152a6c18c513e7bb0e33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a623f5af1cb0b2ed12b7b328b42d5b81.setIcon(icon_716c17ef9f93152a6c18c513e7bb0e33);
+        
+    
+        var popup_c92e0a6efca5e909f962da1af3276994 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c467e5a0e4473a001e42bcf2e9775390 = $(`<div id="html_c467e5a0e4473a001e42bcf2e9775390" style="width: 100.0%; height: 100.0%;">Ubicación: Melbourne&lt;br&gt;Latitud: -37.8136&lt;br&gt;Longitud: 144.9631&lt;br&gt;Promedio de Lluvia: 1.87 mm</div>`)[0];
+                popup_c92e0a6efca5e909f962da1af3276994.setContent(html_c467e5a0e4473a001e42bcf2e9775390);
+            
+        
+
+        marker_a623f5af1cb0b2ed12b7b328b42d5b81.bindPopup(popup_c92e0a6efca5e909f962da1af3276994)
+        ;
+
+        
+    
+    
+            var marker_4e725fd79058a6d360d5f6b5a5876621 = L.marker(
+                [-37.669, 144.841],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_32eb1ddbaa6fb4a9828862b9dea558a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4e725fd79058a6d360d5f6b5a5876621.setIcon(icon_32eb1ddbaa6fb4a9828862b9dea558a4);
+        
+    
+        var popup_8f4e84091c36b95f2742cfad1895bd1e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b09eafcc278f4224bd316a87248c9dd = $(`<div id="html_5b09eafcc278f4224bd316a87248c9dd" style="width: 100.0%; height: 100.0%;">Ubicación: MelbourneAirport&lt;br&gt;Latitud: -37.669&lt;br&gt;Longitud: 144.841&lt;br&gt;Promedio de Lluvia: 1.45 mm</div>`)[0];
+                popup_8f4e84091c36b95f2742cfad1895bd1e.setContent(html_5b09eafcc278f4224bd316a87248c9dd);
+            
+        
+
+        marker_4e725fd79058a6d360d5f6b5a5876621.bindPopup(popup_8f4e84091c36b95f2742cfad1895bd1e)
+        ;
+
+        
+    
+    
+            var marker_6c480fb37435b1ede26cf22a88dd9dff = L.marker(
+                [-34.2083, 142.127],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_6a7bf0c4353b1eea5f8a09337bbb79cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6c480fb37435b1ede26cf22a88dd9dff.setIcon(icon_6a7bf0c4353b1eea5f8a09337bbb79cd);
+        
+    
+        var popup_0fe83ce88b55117b12bfc2fd52f8e746 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d8bec8e4cd1f7ff9b097b8e3de7fd8d6 = $(`<div id="html_d8bec8e4cd1f7ff9b097b8e3de7fd8d6" style="width: 100.0%; height: 100.0%;">Ubicación: Mildura&lt;br&gt;Latitud: -34.2083&lt;br&gt;Longitud: 142.127&lt;br&gt;Promedio de Lluvia: 0.95 mm</div>`)[0];
+                popup_0fe83ce88b55117b12bfc2fd52f8e746.setContent(html_d8bec8e4cd1f7ff9b097b8e3de7fd8d6);
+            
+        
+
+        marker_6c480fb37435b1ede26cf22a88dd9dff.bindPopup(popup_0fe83ce88b55117b12bfc2fd52f8e746)
+        ;
+
+        
+    
+    
+            var marker_aab27b9edddb456d70846bfd51311cac = L.marker(
+                [-29.4638, 149.8413],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_ab5104a30893e9ff8add18854347ba74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_aab27b9edddb456d70846bfd51311cac.setIcon(icon_ab5104a30893e9ff8add18854347ba74);
+        
+    
+        var popup_d2520b446c470115c0de3f441c20a16b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ff60bb5ce152fb33f230f7c6394d647 = $(`<div id="html_1ff60bb5ce152fb33f230f7c6394d647" style="width: 100.0%; height: 100.0%;">Ubicación: Moree&lt;br&gt;Latitud: -29.4638&lt;br&gt;Longitud: 149.8413&lt;br&gt;Promedio de Lluvia: 1.63 mm</div>`)[0];
+                popup_d2520b446c470115c0de3f441c20a16b.setContent(html_1ff60bb5ce152fb33f230f7c6394d647);
+            
+        
+
+        marker_aab27b9edddb456d70846bfd51311cac.bindPopup(popup_d2520b446c470115c0de3f441c20a16b)
+        ;
+
+        
+    
+    
+            var marker_a7a164624585d4942eb5f45a65aa253b = L.marker(
+                [-37.8241, 140.7798],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_d88f0a1c98499cbb0ecdf2c9eb43c888 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a7a164624585d4942eb5f45a65aa253b.setIcon(icon_d88f0a1c98499cbb0ecdf2c9eb43c888);
+        
+    
+        var popup_a7b3eeeacc7c58185b6e2709e4b8eecf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_085a770f7635322aeb61ac2951ddc830 = $(`<div id="html_085a770f7635322aeb61ac2951ddc830" style="width: 100.0%; height: 100.0%;">Ubicación: MountGambier&lt;br&gt;Latitud: -37.8241&lt;br&gt;Longitud: 140.7798&lt;br&gt;Promedio de Lluvia: 2.09 mm</div>`)[0];
+                popup_a7b3eeeacc7c58185b6e2709e4b8eecf.setContent(html_085a770f7635322aeb61ac2951ddc830);
+            
+        
+
+        marker_a7a164624585d4942eb5f45a65aa253b.bindPopup(popup_a7b3eeeacc7c58185b6e2709e4b8eecf)
+        ;
+
+        
+    
+    
+            var marker_8f6416fb8c14f4f201375afbe92b5846 = L.marker(
+                [-35.5294, 148.772],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_25e58c718c0e07d2dfd3e2d77e1e9b26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8f6416fb8c14f4f201375afbe92b5846.setIcon(icon_25e58c718c0e07d2dfd3e2d77e1e9b26);
+        
+    
+        var popup_6a33d5c1077244573ff8b03d095ffa90 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d89c5d4c021db9da6628cb3a08a42750 = $(`<div id="html_d89c5d4c021db9da6628cb3a08a42750" style="width: 100.0%; height: 100.0%;">Ubicación: MountGinini&lt;br&gt;Latitud: -35.5294&lt;br&gt;Longitud: 148.772&lt;br&gt;Promedio de Lluvia: 3.29 mm</div>`)[0];
+                popup_6a33d5c1077244573ff8b03d095ffa90.setContent(html_d89c5d4c021db9da6628cb3a08a42750);
+            
+        
+
+        marker_8f6416fb8c14f4f201375afbe92b5846.bindPopup(popup_6a33d5c1077244573ff8b03d095ffa90)
+        ;
+
+        
+    
+    
+            var marker_5e3c96146f38c13d179f0d1f4ed09b1f = L.marker(
+                [-32.9283, 151.7817],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_207395c3d028ddb62c0346b9a590c001 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5e3c96146f38c13d179f0d1f4ed09b1f.setIcon(icon_207395c3d028ddb62c0346b9a590c001);
+        
+    
+        var popup_fdf27deab5bddbea046aed03c9b45674 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c1fdf4741e1c10c2ee6491273953bd9 = $(`<div id="html_8c1fdf4741e1c10c2ee6491273953bd9" style="width: 100.0%; height: 100.0%;">Ubicación: Newcastle&lt;br&gt;Latitud: -32.9283&lt;br&gt;Longitud: 151.7817&lt;br&gt;Promedio de Lluvia: 3.18 mm</div>`)[0];
+                popup_fdf27deab5bddbea046aed03c9b45674.setContent(html_8c1fdf4741e1c10c2ee6491273953bd9);
+            
+        
+
+        marker_5e3c96146f38c13d179f0d1f4ed09b1f.bindPopup(popup_fdf27deab5bddbea046aed03c9b45674)
+        ;
+
+        
+    
+    
+            var marker_7f4907dce4c1efb9c604906e8bca7e06 = L.marker(
+                [-36.3328, 141.6503],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_2b3b3770ee76ff0a7d967d06323924a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7f4907dce4c1efb9c604906e8bca7e06.setIcon(icon_2b3b3770ee76ff0a7d967d06323924a2);
+        
+    
+        var popup_bda7356cbc6038305adfe01bd1ad9b11 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f98a975adc4dd94c8f636e2245c1d5fc = $(`<div id="html_f98a975adc4dd94c8f636e2245c1d5fc" style="width: 100.0%; height: 100.0%;">Ubicación: Nhil&lt;br&gt;Latitud: -36.3328&lt;br&gt;Longitud: 141.6503&lt;br&gt;Promedio de Lluvia: 0.94 mm</div>`)[0];
+                popup_bda7356cbc6038305adfe01bd1ad9b11.setContent(html_f98a975adc4dd94c8f636e2245c1d5fc);
+            
+        
+
+        marker_7f4907dce4c1efb9c604906e8bca7e06.bindPopup(popup_bda7356cbc6038305adfe01bd1ad9b11)
+        ;
+
+        
+    
+    
+            var marker_88fbbef9a29d728837532caf3a92b222 = L.marker(
+                [-33.2833, 151.5667],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_05e3c1f99e8d8048cb61c9abd1d7a9f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_88fbbef9a29d728837532caf3a92b222.setIcon(icon_05e3c1f99e8d8048cb61c9abd1d7a9f1);
+        
+    
+        var popup_fc0c19d3ac81076598b1fe20b6c9b0a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1d139978bc53f951a61d152cc1c258e = $(`<div id="html_f1d139978bc53f951a61d152cc1c258e" style="width: 100.0%; height: 100.0%;">Ubicación: NorahHead&lt;br&gt;Latitud: -33.2833&lt;br&gt;Longitud: 151.5667&lt;br&gt;Promedio de Lluvia: 3.39 mm</div>`)[0];
+                popup_fc0c19d3ac81076598b1fe20b6c9b0a7.setContent(html_f1d139978bc53f951a61d152cc1c258e);
+            
+        
+
+        marker_88fbbef9a29d728837532caf3a92b222.bindPopup(popup_fc0c19d3ac81076598b1fe20b6c9b0a7)
+        ;
+
+        
+    
+    
+            var marker_e8a99197d04eed1106b3cff36edfcfbf = L.marker(
+                [-29.0408, 167.9547],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_851bd5740cb43de8fc819df39b16345f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e8a99197d04eed1106b3cff36edfcfbf.setIcon(icon_851bd5740cb43de8fc819df39b16345f);
+        
+    
+        var popup_656900ceb19d648279d216e252c425c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8478c2f09eadffafa3eee1d24b6bd758 = $(`<div id="html_8478c2f09eadffafa3eee1d24b6bd758" style="width: 100.0%; height: 100.0%;">Ubicación: NorfolkIsland&lt;br&gt;Latitud: -29.0408&lt;br&gt;Longitud: 167.9547&lt;br&gt;Promedio de Lluvia: 3.13 mm</div>`)[0];
+                popup_656900ceb19d648279d216e252c425c5.setContent(html_8478c2f09eadffafa3eee1d24b6bd758);
+            
+        
+
+        marker_e8a99197d04eed1106b3cff36edfcfbf.bindPopup(popup_656900ceb19d648279d216e252c425c5)
+        ;
+
+        
+    
+    
+            var marker_182fe7baa96aab3c06f5fbcd640c1274 = L.marker(
+                [-34.4667, 138.9833],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_5ad96a2444aa46b5030da352e4e16723 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_182fe7baa96aab3c06f5fbcd640c1274.setIcon(icon_5ad96a2444aa46b5030da352e4e16723);
+        
+    
+        var popup_cd01a1b9ce26e0a7e68698caade94100 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ad4ec9fa6d2111c4cff35ac6b45c0c6 = $(`<div id="html_0ad4ec9fa6d2111c4cff35ac6b45c0c6" style="width: 100.0%; height: 100.0%;">Ubicación: Nuriootpa&lt;br&gt;Latitud: -34.4667&lt;br&gt;Longitud: 138.9833&lt;br&gt;Promedio de Lluvia: 1.39 mm</div>`)[0];
+                popup_cd01a1b9ce26e0a7e68698caade94100.setContent(html_0ad4ec9fa6d2111c4cff35ac6b45c0c6);
+            
+        
+
+        marker_182fe7baa96aab3c06f5fbcd640c1274.bindPopup(popup_cd01a1b9ce26e0a7e68698caade94100)
+        ;
+
+        
+    
+    
+            var marker_de340877b72f9b7c8e80cbd827024b88 = L.marker(
+                [-31.6675, 116.0158],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_20bf2759edf44b57d6d48dff2799d26f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_de340877b72f9b7c8e80cbd827024b88.setIcon(icon_20bf2759edf44b57d6d48dff2799d26f);
+        
+    
+        var popup_1f631007b28775ed516938c8d0bab340 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c29288751a42bde75c7d1b2470f561be = $(`<div id="html_c29288751a42bde75c7d1b2470f561be" style="width: 100.0%; height: 100.0%;">Ubicación: PearceRAAF&lt;br&gt;Latitud: -31.6675&lt;br&gt;Longitud: 116.0158&lt;br&gt;Promedio de Lluvia: 1.67 mm</div>`)[0];
+                popup_1f631007b28775ed516938c8d0bab340.setContent(html_c29288751a42bde75c7d1b2470f561be);
+            
+        
+
+        marker_de340877b72f9b7c8e80cbd827024b88.bindPopup(popup_1f631007b28775ed516938c8d0bab340)
+        ;
+
+        
+    
+    
+            var marker_4c76f32f7fbb873b7bcb14d09d5c6186 = L.marker(
+                [-33.7581, 150.695],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_5e19f03aa0ea9cd2bbe911efe5d3d287 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4c76f32f7fbb873b7bcb14d09d5c6186.setIcon(icon_5e19f03aa0ea9cd2bbe911efe5d3d287);
+        
+    
+        var popup_c6194711264e36611cd5137096f7e6d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d3396f9f6da84f9a184bef1c6b44820 = $(`<div id="html_2d3396f9f6da84f9a184bef1c6b44820" style="width: 100.0%; height: 100.0%;">Ubicación: Penrith&lt;br&gt;Latitud: -33.7581&lt;br&gt;Longitud: 150.695&lt;br&gt;Promedio de Lluvia: 2.18 mm</div>`)[0];
+                popup_c6194711264e36611cd5137096f7e6d1.setContent(html_2d3396f9f6da84f9a184bef1c6b44820);
+            
+        
+
+        marker_4c76f32f7fbb873b7bcb14d09d5c6186.bindPopup(popup_c6194711264e36611cd5137096f7e6d1)
+        ;
+
+        
+    
+    
+            var marker_a0741f3fbed86421ac2fd50572512955 = L.marker(
+                [-31.9522, 115.8589],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_fd036cdbb7edc13d6b96eb578f2c91a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a0741f3fbed86421ac2fd50572512955.setIcon(icon_fd036cdbb7edc13d6b96eb578f2c91a0);
+        
+    
+        var popup_61fbae07a2eb194822028b28a68cadb8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7fd03453832e236bdfbe0e97ec2850bf = $(`<div id="html_7fd03453832e236bdfbe0e97ec2850bf" style="width: 100.0%; height: 100.0%;">Ubicación: Perth&lt;br&gt;Latitud: -31.9522&lt;br&gt;Longitud: 115.8589&lt;br&gt;Promedio de Lluvia: 1.91 mm</div>`)[0];
+                popup_61fbae07a2eb194822028b28a68cadb8.setContent(html_7fd03453832e236bdfbe0e97ec2850bf);
+            
+        
+
+        marker_a0741f3fbed86421ac2fd50572512955.bindPopup(popup_61fbae07a2eb194822028b28a68cadb8)
+        ;
+
+        
+    
+    
+            var marker_7dbe84a7b00c586c2bfda5243f4b5b4c = L.marker(
+                [-31.9405, 115.966],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_6bc24eef123d650941e220287b489e10 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7dbe84a7b00c586c2bfda5243f4b5b4c.setIcon(icon_6bc24eef123d650941e220287b489e10);
+        
+    
+        var popup_86ba8a54f7f34fc40df306d298d1eb68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d5f4d9d9cacc2efb362fc5eb586d1cd8 = $(`<div id="html_d5f4d9d9cacc2efb362fc5eb586d1cd8" style="width: 100.0%; height: 100.0%;">Ubicación: PerthAirport&lt;br&gt;Latitud: -31.9405&lt;br&gt;Longitud: 115.966&lt;br&gt;Promedio de Lluvia: 1.76 mm</div>`)[0];
+                popup_86ba8a54f7f34fc40df306d298d1eb68.setContent(html_d5f4d9d9cacc2efb362fc5eb586d1cd8);
+            
+        
+
+        marker_7dbe84a7b00c586c2bfda5243f4b5b4c.bindPopup(popup_86ba8a54f7f34fc40df306d298d1eb68)
+        ;
+
+        
+    
+    
+            var marker_567bfd2560ab005f38f95623f7cb4b53 = L.marker(
+                [-38.3511, 141.6056],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_844068a69df624ea9e1159aa24be6c90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_567bfd2560ab005f38f95623f7cb4b53.setIcon(icon_844068a69df624ea9e1159aa24be6c90);
+        
+    
+        var popup_bd921e10a02e1a2af315d15043a14a4c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1cc26ad4a42cc6a866643dbfd528421 = $(`<div id="html_e1cc26ad4a42cc6a866643dbfd528421" style="width: 100.0%; height: 100.0%;">Ubicación: Portland&lt;br&gt;Latitud: -38.3511&lt;br&gt;Longitud: 141.6056&lt;br&gt;Promedio de Lluvia: 2.53 mm</div>`)[0];
+                popup_bd921e10a02e1a2af315d15043a14a4c.setContent(html_e1cc26ad4a42cc6a866643dbfd528421);
+            
+        
+
+        marker_567bfd2560ab005f38f95623f7cb4b53.bindPopup(popup_bd921e10a02e1a2af315d15043a14a4c)
+        ;
+
+        
+    
+    
+            var marker_dae3f7742764771452cde93efae32c23 = L.marker(
+                [-33.6, 150.75],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_3a03226590780ffa1c6607ace4286f57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_dae3f7742764771452cde93efae32c23.setIcon(icon_3a03226590780ffa1c6607ace4286f57);
+        
+    
+        var popup_d2884b0980db93f2f9b74081df872408 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e620f1e771ab7a78bc73b137e1e5353c = $(`<div id="html_e620f1e771ab7a78bc73b137e1e5353c" style="width: 100.0%; height: 100.0%;">Ubicación: Richmond&lt;br&gt;Latitud: -33.6&lt;br&gt;Longitud: 150.75&lt;br&gt;Promedio de Lluvia: 2.14 mm</div>`)[0];
+                popup_d2884b0980db93f2f9b74081df872408.setContent(html_e620f1e771ab7a78bc73b137e1e5353c);
+            
+        
+
+        marker_dae3f7742764771452cde93efae32c23.bindPopup(popup_d2884b0980db93f2f9b74081df872408)
+        ;
+
+        
+    
+    
+            var marker_4449f31986f04bfd7dc3994464f8dc64 = L.marker(
+                [-38.1063, 147.0674],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_79e394f74b320535f478f03079fbee1e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4449f31986f04bfd7dc3994464f8dc64.setIcon(icon_79e394f74b320535f478f03079fbee1e);
+        
+    
+        var popup_353c4306307819993980e3e0250d9568 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd62235a3b3e018ad12b29eeb0cf8622 = $(`<div id="html_dd62235a3b3e018ad12b29eeb0cf8622" style="width: 100.0%; height: 100.0%;">Ubicación: Sale&lt;br&gt;Latitud: -38.1063&lt;br&gt;Longitud: 147.0674&lt;br&gt;Promedio de Lluvia: 1.51 mm</div>`)[0];
+                popup_353c4306307819993980e3e0250d9568.setContent(html_dd62235a3b3e018ad12b29eeb0cf8622);
+            
+        
+
+        marker_4449f31986f04bfd7dc3994464f8dc64.bindPopup(popup_353c4306307819993980e3e0250d9568)
+        ;
+
+        
+    
+    
+            var marker_5e2c34761d51b4215e42c97c175af8b0 = L.marker(
+                [-32.9819, 121.6431],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_44ed775c9e15d97120c1227187567a9e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5e2c34761d51b4215e42c97c175af8b0.setIcon(icon_44ed775c9e15d97120c1227187567a9e);
+        
+    
+        var popup_a5513382b739f868b48b0a401cff6288 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90c36ee2924527329e19271ff0ca6741 = $(`<div id="html_90c36ee2924527329e19271ff0ca6741" style="width: 100.0%; height: 100.0%;">Ubicación: SalmonGums&lt;br&gt;Latitud: -32.9819&lt;br&gt;Longitud: 121.6431&lt;br&gt;Promedio de Lluvia: 1.03 mm</div>`)[0];
+                popup_a5513382b739f868b48b0a401cff6288.setContent(html_90c36ee2924527329e19271ff0ca6741);
+            
+        
+
+        marker_5e2c34761d51b4215e42c97c175af8b0.bindPopup(popup_a5513382b739f868b48b0a401cff6288)
+        ;
+
+        
+    
+    
+            var marker_ac33b74089f5a67bd44cc678cce34503 = L.marker(
+                [-33.8688, 151.2093],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_15caf4ab57faa886aa0dc20f4381b7f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ac33b74089f5a67bd44cc678cce34503.setIcon(icon_15caf4ab57faa886aa0dc20f4381b7f0);
+        
+    
+        var popup_4c679232b5a156d33cf89f0b8a2c754b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a33f298af1727abb58b3f61325900ea8 = $(`<div id="html_a33f298af1727abb58b3f61325900ea8" style="width: 100.0%; height: 100.0%;">Ubicación: Sydney&lt;br&gt;Latitud: -33.8688&lt;br&gt;Longitud: 151.2093&lt;br&gt;Promedio de Lluvia: 3.33 mm</div>`)[0];
+                popup_4c679232b5a156d33cf89f0b8a2c754b.setContent(html_a33f298af1727abb58b3f61325900ea8);
+            
+        
+
+        marker_ac33b74089f5a67bd44cc678cce34503.bindPopup(popup_4c679232b5a156d33cf89f0b8a2c754b)
+        ;
+
+        
+    
+    
+            var marker_bd335996c1a7e74a9f73c480250178fb = L.marker(
+                [-33.9461, 151.1772],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_85a298a5d01218d4fbc7d5f1ea4109aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_bd335996c1a7e74a9f73c480250178fb.setIcon(icon_85a298a5d01218d4fbc7d5f1ea4109aa);
+        
+    
+        var popup_3e3762eb5a2cf24cfd9c8a68150b2d21 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d63ff78f5dfa6967dcc60bbbe74f37d3 = $(`<div id="html_d63ff78f5dfa6967dcc60bbbe74f37d3" style="width: 100.0%; height: 100.0%;">Ubicación: SydneyAirport&lt;br&gt;Latitud: -33.9461&lt;br&gt;Longitud: 151.1772&lt;br&gt;Promedio de Lluvia: 3.01 mm</div>`)[0];
+                popup_3e3762eb5a2cf24cfd9c8a68150b2d21.setContent(html_d63ff78f5dfa6967dcc60bbbe74f37d3);
+            
+        
+
+        marker_bd335996c1a7e74a9f73c480250178fb.bindPopup(popup_3e3762eb5a2cf24cfd9c8a68150b2d21)
+        ;
+
+        
+    
+    
+            var marker_95c9a2fc61376e3a92d7cb58068938ac = L.marker(
+                [-19.2583, 146.8169],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_8b330650c9a7662f99469fe4c34b8ae9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_95c9a2fc61376e3a92d7cb58068938ac.setIcon(icon_8b330650c9a7662f99469fe4c34b8ae9);
+        
+    
+        var popup_d26a5e047ac8b3a5120fc5d650e7ab48 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_03e6dbfd250277167eb20b15e43bd0df = $(`<div id="html_03e6dbfd250277167eb20b15e43bd0df" style="width: 100.0%; height: 100.0%;">Ubicación: Townsville&lt;br&gt;Latitud: -19.2583&lt;br&gt;Longitud: 146.8169&lt;br&gt;Promedio de Lluvia: 3.49 mm</div>`)[0];
+                popup_d26a5e047ac8b3a5120fc5d650e7ab48.setContent(html_03e6dbfd250277167eb20b15e43bd0df);
+            
+        
+
+        marker_95c9a2fc61376e3a92d7cb58068938ac.bindPopup(popup_d26a5e047ac8b3a5120fc5d650e7ab48)
+        ;
+
+        
+    
+    
+            var marker_db58ce39fa938f0f2ab7bd5acb92ed35 = L.marker(
+                [-35.4244, 149.0887],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_9769327b7cbeebc46a3b0269f09620e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_db58ce39fa938f0f2ab7bd5acb92ed35.setIcon(icon_9769327b7cbeebc46a3b0269f09620e8);
+        
+    
+        var popup_9b2f2ba9e5946b67b3af4208fbc52369 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc26cebc6594ff858658bcd131cdd63e = $(`<div id="html_dc26cebc6594ff858658bcd131cdd63e" style="width: 100.0%; height: 100.0%;">Ubicación: Tuggeranong&lt;br&gt;Latitud: -35.4244&lt;br&gt;Longitud: 149.0887&lt;br&gt;Promedio de Lluvia: 2.16 mm</div>`)[0];
+                popup_9b2f2ba9e5946b67b3af4208fbc52369.setContent(html_dc26cebc6594ff858658bcd131cdd63e);
+            
+        
+
+        marker_db58ce39fa938f0f2ab7bd5acb92ed35.bindPopup(popup_9b2f2ba9e5946b67b3af4208fbc52369)
+        ;
+
+        
+    
+    
+            var marker_968440b713bb39cbbe82a8850e6d7663 = L.marker(
+                [-25.3444, 131.0369],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_b72f47b8090ccea75df46d715b57f87d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_968440b713bb39cbbe82a8850e6d7663.setIcon(icon_b72f47b8090ccea75df46d715b57f87d);
+        
+    
+        var popup_ea051e80fb06a0124b85a431ead57449 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a5dcc7cfe080b3dc9efba036f878cc7a = $(`<div id="html_a5dcc7cfe080b3dc9efba036f878cc7a" style="width: 100.0%; height: 100.0%;">Ubicación: Uluru&lt;br&gt;Latitud: -25.3444&lt;br&gt;Longitud: 131.0369&lt;br&gt;Promedio de Lluvia: 0.78 mm</div>`)[0];
+                popup_ea051e80fb06a0124b85a431ead57449.setContent(html_a5dcc7cfe080b3dc9efba036f878cc7a);
+            
+        
+
+        marker_968440b713bb39cbbe82a8850e6d7663.bindPopup(popup_ea051e80fb06a0124b85a431ead57449)
+        ;
+
+        
+    
+    
+            var marker_78c4b81c3ecbf924c9bbb488da11eb7c = L.marker(
+                [-35.1082, 147.3598],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_95b8c577a0f0b58bae00af56fd15867f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_78c4b81c3ecbf924c9bbb488da11eb7c.setIcon(icon_95b8c577a0f0b58bae00af56fd15867f);
+        
+    
+        var popup_4fad5034cf8d617267119c99b0ae56f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_358e2bec14e0f855b31fd068d18e9de5 = $(`<div id="html_358e2bec14e0f855b31fd068d18e9de5" style="width: 100.0%; height: 100.0%;">Ubicación: WaggaWagga&lt;br&gt;Latitud: -35.1082&lt;br&gt;Longitud: 147.3598&lt;br&gt;Promedio de Lluvia: 1.71 mm</div>`)[0];
+                popup_4fad5034cf8d617267119c99b0ae56f8.setContent(html_358e2bec14e0f855b31fd068d18e9de5);
+            
+        
+
+        marker_78c4b81c3ecbf924c9bbb488da11eb7c.bindPopup(popup_4fad5034cf8d617267119c99b0ae56f8)
+        ;
+
+        
+    
+    
+            var marker_34a9a670882d015c5afab3266b91906d = L.marker(
+                [-34.9772, 116.7317],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_9f4e6a59d6c31a822cb25d88a209adec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_34a9a670882d015c5afab3266b91906d.setIcon(icon_9f4e6a59d6c31a822cb25d88a209adec);
+        
+    
+        var popup_0c97c0130d9b20c6dea51714c3cfa212 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8fdcb741c725e98e1b26f598699865bf = $(`<div id="html_8fdcb741c725e98e1b26f598699865bf" style="width: 100.0%; height: 100.0%;">Ubicación: Walpole&lt;br&gt;Latitud: -34.9772&lt;br&gt;Longitud: 116.7317&lt;br&gt;Promedio de Lluvia: 2.91 mm</div>`)[0];
+                popup_0c97c0130d9b20c6dea51714c3cfa212.setContent(html_8fdcb741c725e98e1b26f598699865bf);
+            
+        
+
+        marker_34a9a670882d015c5afab3266b91906d.bindPopup(popup_0c97c0130d9b20c6dea51714c3cfa212)
+        ;
+
+        
+    
+    
+            var marker_8ad6a37de4a53162970541451b34fbff = L.marker(
+                [-37.7114, 145.0831],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_6a13633b0e8899d48c8a83f8a12fb31d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8ad6a37de4a53162970541451b34fbff.setIcon(icon_6a13633b0e8899d48c8a83f8a12fb31d);
+        
+    
+        var popup_00228bf7f545cbb7f69604f5c21e60c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a39caf7ae78869a11dbf135096cb064f = $(`<div id="html_a39caf7ae78869a11dbf135096cb064f" style="width: 100.0%; height: 100.0%;">Ubicación: Watsonia&lt;br&gt;Latitud: -37.7114&lt;br&gt;Longitud: 145.0831&lt;br&gt;Promedio de Lluvia: 1.86 mm</div>`)[0];
+                popup_00228bf7f545cbb7f69604f5c21e60c2.setContent(html_a39caf7ae78869a11dbf135096cb064f);
+            
+        
+
+        marker_8ad6a37de4a53162970541451b34fbff.bindPopup(popup_00228bf7f545cbb7f69604f5c21e60c2)
+        ;
+
+        
+    
+    
+            var marker_8a14b35df9d8d2e3201868cfb473305d = L.marker(
+                [-32.815, 151.8428],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_63f8594783010c857928ad7e070a95cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8a14b35df9d8d2e3201868cfb473305d.setIcon(icon_63f8594783010c857928ad7e070a95cc);
+        
+    
+        var popup_a533ade86e92d47a9a549be6fd1c595e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac1fa4f0768db35181a2fe930c401c86 = $(`<div id="html_ac1fa4f0768db35181a2fe930c401c86" style="width: 100.0%; height: 100.0%;">Ubicación: Williamtown&lt;br&gt;Latitud: -32.815&lt;br&gt;Longitud: 151.8428&lt;br&gt;Promedio de Lluvia: 3.59 mm</div>`)[0];
+                popup_a533ade86e92d47a9a549be6fd1c595e.setContent(html_ac1fa4f0768db35181a2fe930c401c86);
+            
+        
+
+        marker_8a14b35df9d8d2e3201868cfb473305d.bindPopup(popup_a533ade86e92d47a9a549be6fd1c595e)
+        ;
+
+        
+    
+    
+            var marker_466968ad3fafa0f9545b0f7e37dc1690 = L.marker(
+                [-34.0264, 115.1],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_34a736662fced200c118975552b6f223 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_466968ad3fafa0f9545b0f7e37dc1690.setIcon(icon_34a736662fced200c118975552b6f223);
+        
+    
+        var popup_e6574a101068e54e85c0f4e12eaa81c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_412a41bbf7c2d4eedce06a2211315e04 = $(`<div id="html_412a41bbf7c2d4eedce06a2211315e04" style="width: 100.0%; height: 100.0%;">Ubicación: Witchcliffe&lt;br&gt;Latitud: -34.0264&lt;br&gt;Longitud: 115.1&lt;br&gt;Promedio de Lluvia: 2.90 mm</div>`)[0];
+                popup_e6574a101068e54e85c0f4e12eaa81c1.setContent(html_412a41bbf7c2d4eedce06a2211315e04);
+            
+        
+
+        marker_466968ad3fafa0f9545b0f7e37dc1690.bindPopup(popup_e6574a101068e54e85c0f4e12eaa81c1)
+        ;
+
+        
+    
+    
+            var marker_1334c131899be0650274a8e9cdc03ab6 = L.marker(
+                [-34.4241, 150.8931],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_c64c62030b00f80d3b90767f6905c292 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1334c131899be0650274a8e9cdc03ab6.setIcon(icon_c64c62030b00f80d3b90767f6905c292);
+        
+    
+        var popup_a99f687844bd4ef40c759c08da278b0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3fe0954794cbab0ed7eb45aa19f6c1d9 = $(`<div id="html_3fe0954794cbab0ed7eb45aa19f6c1d9" style="width: 100.0%; height: 100.0%;">Ubicación: Wollongong&lt;br&gt;Latitud: -34.4241&lt;br&gt;Longitud: 150.8931&lt;br&gt;Promedio de Lluvia: 3.60 mm</div>`)[0];
+                popup_a99f687844bd4ef40c759c08da278b0b.setContent(html_3fe0954794cbab0ed7eb45aa19f6c1d9);
+            
+        
+
+        marker_1334c131899be0650274a8e9cdc03ab6.bindPopup(popup_a99f687844bd4ef40c759c08da278b0b)
+        ;
+
+        
+    
+    
+            var marker_33686e458964485b3102856c8c3f14a5 = L.marker(
+                [-31.1997, 136.8256],
+                {}
+            ).addTo(map_cbffbd9ec6a1ff588315c14c0a3437fa);
+        
+    
+            var icon_f7c7fc0d5bf620f0b508db2c4b77c5c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_33686e458964485b3102856c8c3f14a5.setIcon(icon_f7c7fc0d5bf620f0b508db2c4b77c5c7);
+        
+    
+        var popup_50bc171380f72eb12b4c2026129a20be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_652cafa57719db6f023320655af45330 = $(`<div id="html_652cafa57719db6f023320655af45330" style="width: 100.0%; height: 100.0%;">Ubicación: Woomera&lt;br&gt;Latitud: -31.1997&lt;br&gt;Longitud: 136.8256&lt;br&gt;Promedio de Lluvia: 0.49 mm</div>`)[0];
+                popup_50bc171380f72eb12b4c2026129a20be.setContent(html_652cafa57719db6f023320655af45330);
+            
+        
+
+        marker_33686e458964485b3102856c8c3f14a5.bindPopup(popup_50bc171380f72eb12b4c2026129a20be)
+        ;
+
+        
+    
+</script>
+</html>
