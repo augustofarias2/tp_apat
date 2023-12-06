@@ -87,12 +87,12 @@ if "prediction_type" in locals():
             # Lógica para predecir si llueve o no
             st.write("Executing Rain or Not Prediction...")
             # Agregar aquí la lógica para predecir si llueve o no
-            pipe = joblib.load("rain_or_not_prediction.pkl")
+            pipe_clasf = joblib.load("rain_or_not_prediction.pkl")
             user_input = pd.DataFrame(input_dict, index=[0])
-            prediction = pipe.predict(user_input)
+            prediction = pipe_clasf.predict(user_input)
             prediction_value = prediction[0]
             st.header("Predicted Rain or Not")
-            st.write("Mañana llueve" if prediction_value==1 else "Mañana no llueve")
+            st.write("Mañana llueve" if prediction_value>0.5 else "Mañana no llueve")
 
     
 
