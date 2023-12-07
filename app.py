@@ -2,7 +2,7 @@
 import streamlit as st
 import joblib
 import pandas as pd
-import os
+from datetime import datetime, timedelta
 # from clases_y_funciones import selected_features, feat_eng, CustomQuantileTransformer, CustomStandardScaler, KMeansTransformer, input_features
 
 input_features_num =    [ 
@@ -35,6 +35,16 @@ input_features_str =    [
 input_features_date = ['Date']
 
 
+def predict_rainfall_amount(model, input_dict):
+    user_input = pd.DataFrame(input_dict, index=[0])
+    prediction = model.predict(user_input)
+    return prediction[0][0]
+
+def predict_rain_or_not(model, input_dict):
+    user_input = pd.DataFrame(input_dict, index=[0])
+    prediction = model.predict(user_input)
+    return prediction[0][0]
+
 st.title('Rain Predictor Model')
 
 # Página principal para elegir el tipo de predicción
@@ -47,7 +57,8 @@ if st.button("Predict Rain or Not"):
     prediction_type = "Rain or Not"
        
 # Lógica para la selección del tipo de predicción
-if "prediction_type" in locals():
+# if "prediction_type" in locals():
+def get_user_input(input_features_num, input_features_str, input_features_date):
     st.subheader(f"Prediction Type: {prediction_type}")
 
     # Página para ingresar valores
@@ -59,40 +70,52 @@ if "prediction_type" in locals():
         for feat in input_features_num:
             input_value = st.number_input(f"Enter value for {feat}", value=0.0, step=0.01)
             input_dict[feat] = input_value
+
         for feat in input_features_str:
             input_value = st.text_input(f"Enter value for {feat}", value = "None")
             input_dict[feat] = input_value
+
         for feat in input_features_date:
-            input_value = st.text_input("Select a date", value="yyyy-mm-dd")
-            input_dict[feat] = input_value
+            today = datetime.today()
+            one_year_ago = today - timedelta(days=10000)
+            input_value = st.date_input("Select a date", min_value=one_year_ago)
+            formatted_date = input_value.strftime("%Y-%m-%d")
+            input_dict[feat] = formatted_date
             
-        submit_button = st.form_submit_button(label='Submit')
+        # submit_button = st.form_submit_button(label='Submit')
 
-    if submit_button:
-        st.write("Executing Prediction...")
+    return input_dict#, submit_button
 
-        # Lógica para predecir según el tipo seleccionado
-        if prediction_type == "Rainfall Amount":
-            # Lógica para predecir cantidad de lluvia
+
+
+if "prediction_type" in locals():
+    # if submit_button
+    # st.write("Executing Prediction...")
+
+    # Lógica para predecir según el tipo seleccionado
+    if prediction_type == "Rainfall Amount":
+        user_input, submit_button = get_user_input(input_features_num, input_features_str, input_features_date)
+        st.write(submit_button)
+        if submit_button:
             st.write("Executing Rainfall Amount Prediction...")
-            # Agregar aquí la lógica para predecir la cantidad de lluvia
             pipe = joblib.load("rainfall_amount_prediction.pkl")
-            user_input = pd.DataFrame(input_dict, index=[0])
-            prediction = pipe.predict(user_input)
-            prediction_value = prediction[0]
+            prediction_value = predict_rainfall_amount(pipe, user_input)
             st.header("Predicted Rainfall Amount")
             st.write(prediction_value)
 
-        elif prediction_type == "Rain or Not":
-            # Lógica para predecir si llueve o no
+
+    elif prediction_type == "Rain or Not":
+        # Lógica para predecir si llueve o no
+        st.write("Executing Rain or Not Prediction...")
+        user_input, submit_button = get_user_input(['Sunshine', 'Humidity9am', 'Humidity3pm'], None, None)
+        st.write(user_input)
+        st.write("Executing Rain or Not Prediction2222222...")
+        if submit_button:
             st.write("Executing Rain or Not Prediction...")
-            # Agregar aquí la lógica para predecir si llueve o no
             pipe_clasf = joblib.load("rain_or_not_prediction.pkl")
-            user_input = pd.DataFrame(input_dict, index=[0])
-            prediction = pipe_clasf.predict(user_input)
-            prediction_value = prediction[0]
+            prediction_value = predict_rain_or_not(pipe_clasf, user_input)
             st.header("Predicted Rain or Not")
-            st.write("Mañana llueve" if prediction_value>0.5 else "Mañana no llueve")
+            st.write("Mañana llueve" if prediction_value > 0.5 else "Mañana no llueve")
 
     
 
