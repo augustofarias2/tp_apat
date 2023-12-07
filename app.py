@@ -82,25 +82,22 @@ def get_user_input(input_features_num, input_features_str, input_features_date):
 
 user_input, submit_button = get_user_input(input_features_num, input_features_str, input_features_date)
 
-print("aqui", submit_button)
 
 if submit_button:
 
-    # st.write(user_input)
-    st.write("Executing Rainfall Amount Prediction...")
-    # pipe = joblib.load("C:/Users/augus/Desktop/FCEIA/TUIA/4to_cuatrimestre/Aprendizaje_automatico_I/Tp/tp_apat/rainfall_amount_prediction.joblib")
-
-    # prediction_value = predict_rainfall_amount(pipe, user_input['Sunshine', 'Humidity9am', 'Humidity3pm'])
-    st.header("Predicted Rainfall Amount: ya casi")
-    # st.write(prediction_value)
-    
-
     st.write("Executing Rain or Not Prediction...")
-    # pipe_clasf = joblib.load("rain_or_not_prediction.joblib")
-    # prediction_value = predict_rain_or_not(pipe_clasf, user_input)
-    st.header("Predicted Rain or Not: ya casi")
-    # st.write("Mañana llueve" if prediction_value > 0.5 else "Mañana no llueve")
+    pipe_clasf = joblib.load("rain_or_not_prediction.joblib")
+    prediction_value = predict_rain_or_not(pipe_clasf, user_input)
+    st.header("Predicted Rain or Not:")
+    st.write("Mañana llueve" if prediction_value >= 0.5 else "Mañana no llueve")
 
+    if prediction_value >= 0.5:
+        st.write("Executing Rainfall Amount Prediction...")
+        pipe = joblib.load("rainfall_amount_prediction.joblib")
+
+        prediction_value = predict_rainfall_amount(pipe, user_input['Sunshine', 'Humidity9am', 'Humidity3pm'])
+        st.header("Predicted Rainfall Amount:")
+        st.write(prediction_value)
     
 
 st.markdown(
