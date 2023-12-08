@@ -228,20 +228,3 @@ def dataframe_normalized_regress(df,features):
     X = df_normalized[columns]
 
     return X
-
-clasificadorNN = load_model('ClasificadorNN.h5')
-pipeline_clasf = Pipeline([
-    ('Feature Engineering', FunctionTransformer(feat_eng_clas)),
-    ('Model', clasificadorNN)
-])
-joblib.dump(pipeline_clasf, 'rain_or_not_prediction.joblib')
-
-
-
-regresionNN = load_model('RegresionNN.h5')
-pipeline_regress = Pipeline([
-    ('Feature Engineering', FunctionTransformer(feat_eng_regr)),
-    ('df Normalized', FunctionTransformer(dataframe_normalized_regress, kw_args={'features': selected_features})),
-    ('Model', regresionNN)
-])
-joblib.dump(pipeline_regress, 'rainfall_amount_prediction.joblib')
