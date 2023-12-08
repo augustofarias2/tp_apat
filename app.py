@@ -3,7 +3,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 from datetime import datetime, timedelta
-from functions import * #selected_features, feat_eng, CustomQuantileTransformer, CustomStandardScaler, KMeansTransformer, input_features
+from functions import *
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler, FunctionTransformer
 from sklearn.pipeline import Pipeline
@@ -313,20 +313,19 @@ if submit_button:
     st.write(user_input)
     st.write("Executing Rain or Not Prediction...")
     prediction_value = predict_rain_or_not(pipeline_clasf, user_input[['Sunshine', 'Min_Humidity']])
-    st.header("Predicted Rain or Not:")
-    st.write("Mañana llueve" if prediction_value >= 0.5 else "Mañana no llueve")
+    # st.header("Predicted Rain or Not:")
+    st.header("Mañana llueve" if prediction_value >= 0.5 else "Mañana no llueve")
 
     if prediction_value >= 0.5:
         st.write("Executing Rainfall Amount Prediction...")
         prediction_value = predict_rainfall_amount(pipeline_regress, user_input)
-        st.header("Predicted Rainfall Amount:")
-        st.write(prediction_value)
+        # st.header("Predicted Rainfall Amount:")
+        st.header(f"Lloverán aproximadamente [{prediction_value}] mm")
     
 
 st.markdown(
     """
-    Rain prediction<br>
-    Final Project<br>
+    Final Project of rain prediction<br>
     You can see the code in this [GitHub repository](https://github.com/augustofarias2/tp_apat)<br>
     """, unsafe_allow_html=True
 )
