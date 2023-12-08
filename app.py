@@ -103,21 +103,6 @@ def definir_estado_del_cielo(row):
     else:
         return 'Muy Nublado'
 
-
-def feat_eng_clas(df):
-    df_normalized = df.copy()
-    df_normalized['Min_Humidity'] = df_normalized[['Humidity9am', 'Humidity3pm']].min(axis=1)
-
-    df_normalized.drop(['Humidity3pm','Humidity9am'], axis=1, inplace=True)
-    df_normalized = df_normalized.replace([np.inf, -np.inf], 0)
-
-    scaler = StandardScaler()
-    df_normalized = pd.DataFrame(scaler.fit_transform(df_normalized), columns=df_normalized.columns)
-
-    X = df_normalized[['Sunshine','Min_Humidity']]
-
-    return X
-
 def dataframe_normalized_regress(df,features):
     df_normalized = df.copy()
     skystate = {
@@ -155,20 +140,86 @@ def dataframe_normalized_regress(df,features):
 
     return X
 
+def feat_eng_regr(user_input):
+    user_input=vector_coordinates(user_input,'Wind9am','WindDir9am','WindSpeed9am')
+    user_input=vector_coordinates(user_input,'Wind3pm','WindDir3pm','WindSpeed3pm')
+    user_input=vector_coordinates(user_input,'WindGust','WindGustDir','WindGustSpeed')
+    user_input['Max_Pressure'] = user_input[['Pressure9am', 'Pressure3pm']].max(axis=1)
+    user_input['Min_Pressure'] = user_input[['Pressure9am', 'Pressure3pm']].min(axis=1)
+    user_input['Max_Humidity'] = user_input[['Humidity9am', 'Humidity3pm']].max(axis=1)
+    user_input['Min_Humidity'] = user_input[['Humidity9am', 'Humidity3pm']].min(axis=1)
+    user_input['Estado_Cielo'] = user_input.apply(definir_estado_del_cielo, axis=1)
+    user_input['Cluster'] = cluster_cities(user_input)
 
+    selected_features = [
+                    'MinTemp', 
+                    'MaxTemp', 
+                    'Evaporation',
+                    'Sunshine',
+                    'Wind9amu', 
+                    'Wind9amv', 
+                    'Wind3pmu', 
+                    'Wind3pmv', 
+                    'WindGustu',
+                    'WindGustv', 
+                    'Max_Pressure',
+                    'Min_Pressure',
+                    'Max_Humidity',
+                    'Min_Humidity',
+                    'Estado_Cielo',
+                    'Cluster',
+                    'Date'
+                ]
 
+    user_input=dataframe_normalized_regress(user_input,selected_features)
+
+    return user_input
+
+def feat_eng_clas(user_input):
+    user_input=vector_coordinates(user_input,'Wind9am','WindDir9am','WindSpeed9am')
+    user_input=vector_coordinates(user_input,'Wind3pm','WindDir3pm','WindSpeed3pm')
+    user_input=vector_coordinates(user_input,'WindGust','WindGustDir','WindGustSpeed')
+    user_input['Max_Pressure'] = user_input[['Pressure9am', 'Pressure3pm']].max(axis=1)
+    user_input['Min_Pressure'] = user_input[['Pressure9am', 'Pressure3pm']].min(axis=1)
+    user_input['Max_Humidity'] = user_input[['Humidity9am', 'Humidity3pm']].max(axis=1)
+    user_input['Min_Humidity'] = user_input[['Humidity9am', 'Humidity3pm']].min(axis=1)
+    user_input['Estado_Cielo'] = user_input.apply(definir_estado_del_cielo, axis=1)
+    user_input['Cluster'] = cluster_cities(user_input)
+
+    selected_features = [
+                    'MinTemp', 
+                    'MaxTemp', 
+                    'Evaporation',
+                    'Sunshine',
+                    'Wind9amu', 
+                    'Wind9amv', 
+                    'Wind3pmu', 
+                    'Wind3pmv', 
+                    'WindGustu',
+                    'WindGustv', 
+                    'Max_Pressure',
+                    'Min_Pressure',
+                    'Max_Humidity',
+                    'Min_Humidity',
+                    'Estado_Cielo',
+                    'Cluster',
+                    'Date'
+                ]
+
+    user_input=dataframe_normalized_regress(user_input,selected_features)
+
+    return user_input[['Sunshine', 'Min_Humidity']]
 
 clasificadorNN = load_model('ClasificadorNN.h5')
 pipeline_clasf = Pipeline([
-    # ('Feature Engineering', FunctionTransformer(feat_eng_clas)),
+    ('Feature Engineering', FunctionTransformer(feat_eng_clas)),
     ('Model', clasificadorNN)
 ])
 
 
 regresionNN = load_model('RegresionNN.h5')
 pipeline_regress = Pipeline([
-    # ('Feature Engineering', FunctionTransformer(feat_eng_regr)),
-    # ('df Normalized', FunctionTransformer(dataframe_normalized_regress, kw_args={'features': selected_features})),
+    ('Feature Engineering', FunctionTransformer(feat_eng_regr)),
     ('Model', regresionNN)
 ])
 
@@ -269,50 +320,14 @@ def get_user_input(input_features_num, input_features_str, input_features_date):
 
     user_input = pd.DataFrame(input_dict, index=[0], columns=columns)
 
-    user_input=vector_coordinates(user_input,'Wind9am','WindDir9am','WindSpeed9am')
-    user_input=vector_coordinates(user_input,'Wind3pm','WindDir3pm','WindSpeed3pm')
-    user_input=vector_coordinates(user_input,'WindGust','WindGustDir','WindGustSpeed')
-    user_input['Max_Pressure'] = user_input[['Pressure9am', 'Pressure3pm']].max(axis=1)
-    user_input['Min_Pressure'] = user_input[['Pressure9am', 'Pressure3pm']].min(axis=1)
-    user_input['Max_Humidity'] = user_input[['Humidity9am', 'Humidity3pm']].max(axis=1)
-    user_input['Min_Humidity'] = user_input[['Humidity9am', 'Humidity3pm']].min(axis=1)
-    user_input['Estado_Cielo'] = user_input.apply(definir_estado_del_cielo, axis=1)
-    user_input['Cluster'] = cluster_cities(user_input)
-
-    selected_features = [
-                    'MinTemp', 
-                    'MaxTemp', 
-                    'Evaporation',
-                    'Sunshine',
-                    'Wind9amu', 
-                    'Wind9amv', 
-                    'Wind3pmu', 
-                    'Wind3pmv', 
-                    'WindGustu',
-                    'WindGustv', 
-                    'Max_Pressure',
-                    'Min_Pressure',
-                    'Max_Humidity',
-                    'Min_Humidity',
-                    'Estado_Cielo',
-                    'Cluster',
-                    'Date'
-                ]
-
-    user_input=dataframe_normalized_regress(user_input,selected_features)
-    # user_input.drop(['Cloud3pm','Cloud9am','Humidity3pm','Humidity9am','WindSpeed9am','WindSpeed3pm','WindGustSpeed','WindDir9am','WindDir3pm','WindGustDir','Pressure3pm','Pressure9am','Temp3pm','Temp9am'], axis=1, inplace=True)
-    
-    # input_array = user_input.iloc[0].to_dict()
-
     return user_input, submit_button
 
 user_input, submit_button = get_user_input(input_features_num, input_features_str, input_features_date)
 
-
 if submit_button:
     st.write(user_input)
     st.write("Executing Rain or Not Prediction...")
-    prediction_value = predict_rain_or_not(pipeline_clasf, user_input[['Sunshine', 'Min_Humidity']])
+    prediction_value = predict_rain_or_not(pipeline_clasf, user_input)
     # st.header("Predicted Rain or Not:")
     st.header("Mañana llueve" if prediction_value >= 0.5 else "Mañana no llueve")
 
